@@ -1,0 +1,10 @@
+.me-image{
+    margin: auto;
+    max-width: 80vw;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.image-container{
+    text-align: center;
+}

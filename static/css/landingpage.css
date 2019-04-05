@@ -1,0 +1,127 @@
+.html-landingpage {
+    width: 100%;
+    height: 100%;
+}
+
+.body-landingpage {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bergen2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.navbar-landingpage {
+    background-color: rgb(0, 0, 0, 0.01);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.navbar-landingpage .nav-link,
+.navbar-brand,
+.navbar-toggler {
+    color: white;
+}
+
+.nav-link {
+    transition: color 0.1s ease-in-out;
+}
+
+.nav-link:hover {
+    color: rgba(150, 150, 150);
+}
+
+.navbar-brand:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-landingpage:hover {
+    background-color: rgb(1, 1, 1, 0.6);
+}
+
+.center-name {
+    position: absolute;
+    color: white;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 55px;
+    text-align: center;
+}
+
+.center-name.animate {
+    animation-name: center-name-fadein;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes center-name-fadein {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    transform: translate(0, -100%);
+    padding: 5px;
+}
+
+footer .fab {
+    font-size: 35px;
+    color: white;
+    transition: font-size 0.25s ease-in-out;
+}
+
+footer .fab:hover {
+    font-size: 45px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .center-text {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+
+    text-align: center;
+    color: white;
+    font-size: 11px;
+    padding: 5px;
+}
+
+footer .right-text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-size: 11px;
+    padding: 5px;
+}
+
+footer .right-text a {
+    color: white;
+}
+
+@media (max-width: 870px) {
+    footer .right-text {
+        display: none;
+    }
+}
