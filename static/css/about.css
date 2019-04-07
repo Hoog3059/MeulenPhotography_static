@@ -1,10 +1,17 @@
-.me-image{
+.me-image {
     margin: auto;
     max-width: 80vw;
     width: 100%;
     border-radius: 50%;
 }
 
-.image-container{
+.image-container {
     text-align: center;
+}
+
+.about-text {
+    float: right;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 600;
 }

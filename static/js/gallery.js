@@ -17,7 +17,7 @@ for (let index = 0; index < images.length; index++) {
 }
 
 function sort_all() {
-    activate_sort_button("all");
+    activate_sort_button("btn-all");
 
     var images = document.getElementsByClassName("gallery-img");
     var col = document.getElementById("gallery");
@@ -52,7 +52,19 @@ function sort_landscape() {
     }, 300);
 }
 
-function activate_sort_button(btn_name) {
+function sort_category(category){
+    activate_sort_button("btn-" + category);
+
+    var images = document.getElementsByClassName("gallery-img");
+    var col = document.getElementById("gallery");
+    col.classList.add("animate");
+    activate_category_images(images, category, 300, false);
+    setTimeout(function () {
+        col.classList.remove("animate");
+    }, 300);
+}
+
+function activate_sort_button_old(btn_name) {
     var btn_all = document.getElementById("btn-all");
     var btn_landscape = document.getElementById("btn-landscape");
     var btn_animals = document.getElementById("btn-animals");
@@ -69,6 +81,18 @@ function activate_sort_button(btn_name) {
         btn_all.classList.remove("active");
         btn_landscape.classList.remove("active");
         btn_animals.classList.add("active");
+    }
+}
+
+function activate_sort_button(btn_name) {
+    var btns = document.getElementsByClassName("sort-button");
+
+    for (let index = 0; index < btns.length; index++) {
+        if (btn_name == btns[index].id)    {
+            btns[index].classList.add("active");
+        }else{
+            btns[index].classList.remove("active");
+        }
     }
 }
 

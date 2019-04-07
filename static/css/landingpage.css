@@ -58,8 +58,31 @@
 
 .center-name.animate {
     animation-name: center-name-fadein;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
+}
+
+.center-name .supertext {
+    line-height: 0.3;
+}
+
+.center-name .text-separator {
+    width: 0;
+    border-top-color: white;
+    border-top-width: 2px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.center-name .text-separator.animate{
+    animation-name: text-separator-slidein;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.center-name .subtext {
+    font-size: 24px;
 }
 
 @keyframes center-name-fadein {
@@ -71,6 +94,16 @@
     to {
         opacity: 1;
         transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes text-separator-slidein{
+    from {
+        width: 0;
+    }
+
+    to{
+        width: 100%;
     }
 }
 
