@@ -107,3 +107,13 @@ function activate_category_images(image_set, category, timeout, set_all){
         });
     }, timeout);
 }
+
+function dynamicallyLoadImage(element, url){
+    var image = element;
+    var downloadingImage = new Image();
+    downloadingImage.onload = function(){
+        image.removeAttribute("onload");
+        image.src = downloadingImage.src;        
+    };
+    downloadingImage.src = url;
+}

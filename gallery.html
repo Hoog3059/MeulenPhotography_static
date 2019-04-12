@@ -1,7 +1,8 @@
-<html class="html-landingpage" lang="en"><head>
+<html lang="en" class="html-landingpage"><head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Etienne Meulen is a photographer and medical specialist. View the portfolio here. I can take orders or assignments.">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -10,44 +11,48 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!-- Custom -->
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     
-<link rel="stylesheet" href="./static/css/gallery.css">
+<link rel="stylesheet" href="/static/css/gallery.css">
+
+    
+<script src="/static/js/gallery.js"></script>
 
 
-    <title>Meulen Photography - Gallery</title>
+    <title>Etienne Meulen - Photographer - Gallery</title>
 </head>
 
 <body>
     <div class="page-container">
         <div class="content-wrap">
             <nav class="navbar navbar-expand-sm navbar-dark bg-black">
-                <a class="navbar-brand" href="./index.html">EM</a>
+                <a class="navbar-brand" href="/">EM</a>
                 <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarItems">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.html">HOME</a>
+                            <a class="nav-link" href="/">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./gallery.html">GALLERY</a>
+                            <a class="nav-link" href="/gallery">GALLERY</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./about.html">ABOUT</a>
+                            <a class="nav-link" href="/about">ABOUT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./shop.html">SHOP</a>
+                            <a class="nav-link" href="/shop">SHOP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./contact.html">CONTACT</a>
+                            <a class="nav-link" href="/contact">CONTACT</a>
                         </li>
                     </ul>
                 </div>
             </nav>
             <br>
             
+
 <br>
 <div class="container">
     <div class="row heading">
@@ -59,88 +64,95 @@
     <br>
     <div class="row heading">
         <button id="btn-all" class="sort-button active" onclick="sort_all()">All</button>
-        <button id="btn-landscape" class="sort-button" onclick="sort_category('landscape')">Landscapes</button>
+        <!--{ for category in categories }
+        <button id="btn-{ category }" class="sort-button" onclick="sort_category('{ category }')">{ category|capfirst }</button>
+        { endfor }-->
+        <!--{ category_sort_buttons }-->
+        
+        <button id="btn-landscapes" class="sort-button" onclick="sort_category('landscapes')">Landscapes</button>
+        
         <button id="btn-animals" class="sort-button" onclick="sort_category('animals')">Animals</button>
+        
         <button id="btn-cities" class="sort-button" onclick="sort_category('cities')">Cities</button>
-        <button id="btn-interiors" class="sort-button" onclick="sort_category('interiors')">Interiors</button>
+        
         <button id="btn-people" class="sort-button" onclick="sort_category('people')">People</button>
+        
+        <button id="btn-interiors" class="sort-button" onclick="sort_category('interiors')">Interiors</button>
+        
     </div>
     <div class="row" id="gallery">
         <div class="col-sm-4 gallery-col">
             
             <div>
-                <img class="gallery-img cat-landscape" src="./static/img/gallery/bergen3.jpg">
+                <img class="gallery-img cat-landscapes" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/bergen3.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-animals" src="./static/img/gallery/hert.jpg">
+                <img class="gallery-img cat-animals" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/hert.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-cities" src="./static/img/gallery/rotterdam.jpg">
+                <img class="gallery-img cat-landscapes" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/plant.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-animal" src="./static/img/gallery/neushorn.jpg">
+                <img class="gallery-img cat-landscapes" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/polder2.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-landscape" src="./static/img/gallery/polder4.jpg">
-            </div>
-            
-            <div>
-                <img class="gallery-img cat-animals" src="./static/img/gallery/zwaan.jpg">
+                <img class="gallery-img cat-cities" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/rotterdam.jpg')">
             </div>
             
         </div>
         <div class="col-sm-4 gallery-col">
             
             <div>
-                <img class="gallery-img cat-landscape" src="./static/img/gallery/bergen4.jpg">
+                <img class="gallery-img cat-landscapes" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/bergen4.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-landscape" src="./static/img/gallery/polder.jpg">
+                <img class="gallery-img cat-people" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/kruidenier.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-animals" src="./static/img/gallery/vos.jpg">
+                <img class="gallery-img cat-animals" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/vos.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-other" src="./static/img/gallery/plant.jpg">
+                <img class="gallery-img cat-landscapes" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/polder3.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-animals" src="./static/img/gallery/prairiehond.jpg">
+                <img class="gallery-img cat-animals" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/vogel.jpg')">
             </div>
             
         </div>
         <div class="col-sm-4 gallery-col">
             
             <div>
-                <img class="gallery-img cat-landscape" src="./static/img/gallery/bergen5.jpg">
+                <img class="gallery-img cat-landscapes" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/bergen5.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-landscape" src="./static/img/gallery/polder2.jpg">
+                <img class="gallery-img cat-animals" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/neushorn.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-people" src="./static/img/gallery/kruidenier.jpg">
+                <img class="gallery-img cat-landscapes" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/polder.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-landscape" src="./static/img/gallery/polder3.jpg">
+                <img class="gallery-img cat-animals" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/prairiehond.jpg')">
             </div>
             
             <div>
-                <img class="gallery-img cat-animals" src="./static/img/gallery/vogel.jpg">
+                <img class="gallery-img cat-animals" src="/static/img/loading.gif" onload="dynamicallyLoadImage(this, '/media/original_images/zwaan.jpg')">
             </div>
             
         </div>
     </div>
 </div>
+
 
         </div>
         <footer>
@@ -154,15 +166,4 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    
-<script src="./static/js/gallery.js"></script>
-
-
-
-</body></html>
+    </body></html>
